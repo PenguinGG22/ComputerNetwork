@@ -9,7 +9,7 @@ Detected energy double when there is a collison
 CMSA/CA : Carrier Sense Multiple Access with Collision Avoidance
 Detected energy 5~10% when there is a collison
 
-LAN : Local Area Network
+LAN(Local Area Networks)
 
 Data-link layer
 LLC : Logical Link Control
@@ -49,3 +49,29 @@ Maximum frame length : 1518 byte
 - to reduce size of buffer
 - to prevent monopolizing
 
+Network Interface card (NIC)
+MAC address, Ethernet address, Hardware address
+
+Unicast 1:1 (Byte 1, LSB : 0)
+Mulitcast 1:N (Byte 1, LSB : 1)
+Broadcast 1:ALL (FF-FF-FF-FF-FF-FF)
+
+1-persistent CSMA/CD
+Collision can only occur during the first half of the slot time
+Late collision : collision occurs after the first 512 bit time
+
+MaxLength = Propagation Speed * SlotTime / 2
+MaxLength = (2 * 10 ^ 8)*(5.12*10^-6/2) = 5120m
+MaxLength = 2500m
+
+Standard Ethernet common implementations <Speed, Method, Length>
+10Base5: Bus <10Mbps, Baseband, 500m>
+10Base2: Bus <10Mbps, Baseband, 185m>
+10Base-T: Star <10Mbps, Baseband, 100m>
+10Base-F: Star <10Mbps, Baseband, 2000m>
+
+Bridge : devide the network 
+Raising the bandwith
+Separating collision domains
+
+Swithing hub
